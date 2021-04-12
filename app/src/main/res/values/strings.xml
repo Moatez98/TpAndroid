@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">E-news</string>
+    <string name="quit">Quiter</string>
+    <string name="connect">Connecter</string>
+    <string name="error_login">Login ou ot de passe erronés</string>
+    <string name="taper_votre_password">taper votre password</string>
+    <string name="saisir_votre_login">Saisir votre login</string>
+    <string name="todo">TODO</string>
+
+</resources>
