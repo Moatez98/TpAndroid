@@ -3,6 +3,7 @@ package com.example.e_news;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.telecom.Call;
 import android.view.View;
@@ -41,6 +42,13 @@ public static News[] valeurs ;
            }
        });
    }
+   private  class NewsLoader extends AsyncTask<Void,Void,String>{
+        @Override
+       protected String doInBackround(String...String){
+
+            return null;
+        }
+    }
 
     private void chargerNews() {
         valeurs=new News [3];
