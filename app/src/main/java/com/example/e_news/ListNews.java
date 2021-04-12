@@ -42,13 +42,7 @@ public static News[] valeurs ;
            }
        });
    }
-   private  class NewsLoader extends AsyncTask<Void,Void,String>{
-        @Override
-       protected String doInBackround(String...String){
 
-            return null;
-        }
-    }
 
     private void chargerNews() {
         valeurs=new News [3];
