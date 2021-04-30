@@ -23,7 +23,8 @@ public class DetailActivity extends AppCompatActivity {
         txtCategorie =findViewById(R.id.lbl_categorie);
         txtContenu =findViewById(R.id.lbl_contenu);
         int p=getIntent().getIntExtra("p",-1);
-        News n = valeurs [p] ;
+        News n;
+        n = valeurs.get(p);
         txtTitle.setText(n.getTitre());
         txtContenu.setText(n.getContenu());
         txtCategorie.setText(n.getCategorie());

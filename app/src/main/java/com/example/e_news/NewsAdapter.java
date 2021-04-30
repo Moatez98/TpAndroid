@@ -42,7 +42,7 @@ public class NewsAdapter extends BaseAdapter {
      if(convertView==null){
          LayoutInflater inflater = (LayoutInflater) ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
          convertView=inflater.inflate(R.layout.news_item,null);
-         News ns =valeurs[position];
+         News ns = valeurs.get(position);
          TextView txtdate=convertView.findViewById(R.id.txt_Date);
          TextView txtTitre=convertView.findViewById(R.id.txt_titre);;
          ImageView imgCategorie=convertView.findViewById(R.id.imageView);

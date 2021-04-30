@@ -5,22 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.view.ActionMode;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
-import java.io.DataInputStream;
 import java.io.DataOutputStream;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
-
-import javax.net.ssl.HttpsURLConnection;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -65,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 private class LoginTesteur extends AsyncTask<String,Void,String>{
         protected String doInBackground(String...strings){
             try {
-                URL adresse=new URL ("http://192.168.1.3/cnx.php");
+                URL adresse=new URL (UtilsConst.prefixUrl+"cnx.php");
                 HttpURLConnection cnx =(HttpURLConnection) adresse.openConnection();
                 cnx.setRequestMethod("POST");
                 cnx.setDoOutput(true);

@@ -5,25 +5,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.telecom.Call;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
-import java.io.DataOutputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.ProtocolException;
 import java.net.URL;
-import java.time.LocalDate;
-import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,7 +36,7 @@ public static List <News> valeurs ;
        @Override
        protected String doInBackground(Void... voids) {
            try {
-           URL adresse=new URL ("http://192.168.1.3/get_all_news.php");
+           URL adresse=new URL (UtilsConst.prefixUrl+"get_all_news.php");
            HttpURLConnection cnx =(HttpURLConnection) adresse.openConnection();
 
                cnx.setRequestMethod("GET");
